@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    container_name: livraria
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3366:3306"
+    volumes:
+      - livraria_data:/var/lib/livraria
+
+volumes:
+  livraria_data:
